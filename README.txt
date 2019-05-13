@@ -1,6 +1,49 @@
 Columbia CBMFW4761 Final Project--Transcriptional Profiling of Complex Communities--README
 ---
 
+--
+Guide to Files
+
+sra_list.doc: List of accession numbers of metagenomic and metatranscriptomic datasets used.
+
+Folder .ipynb_Checkpoints: Jupyter notebooks (duplicates in folders below) 
+
+Folder Ftsz_Linkage: Output and analysis of running mOTUs2 with a marker gene HMM replaced by the ftsZ HMM on a sample metagenomic dataset of 87 simulated species. 
+	gutSimulation_profile: Output of running mOTUs2 on the simulated dataset.
+	filtered.COG0099.sam:
+	simulated_87_COG0099_counts.txt: Output of using Python code for getting count data from the mOTUs output
+	.ipynb_checkpoints: Jupyter notebooks for getting count data from the sam file output by mOTUs; analyzing the counts to understand differential expression of the marker genes from output of mOTUs run on metatranscriptomic datasets
+
+Folder HUMAnN2: 
+	Humann2_Metatranscriptome_Analysis.ipynb: Jupyter notebook with code for analyzing the output of Human2 and generating supplmentary figure 5.
+	SRR769418_kneaddata_genefamilies.tsv: 
+
+Folder Marker_Gene_Expression: Code and output for analyzing differential expression of the 10 marker genes.
+	[SRA]_normalized_matrix.txt:
+	[SRA]_expression_matrix.txt:
+	[SRA]_profile.txt:
+	[SRA]_mgc.txt:
+	[SRA]_MGC_OTUs.txt:
+	indiv1_indiv2_differential_expression.R:
+	Marker_Gene_Differential_Expression.ipynb:
+	mOTU-LG.map.tsv:
+
+Folder Merge_Profiles_and_Spearman_Correlations: mOTUs and metaPhlAn profiling output of matched metagenomic and metatranscriptomic data and analysis of accuracy.
+	Folder metaphlan_genomic_output: Output of metaPhlAn profiling on the metagenomic datasets.
+	Folder metaphlan_transcriptomes: Output of metaPhlAn profiling on the metatranscriptomic datasets.
+	Folder motus_genomic_output: Output of mOTUs2 profiling of the metagenomic datasets.
+	Folder motus_transcriptomes: Output of mOTUs2 profiling of the metatranscriptomic datasets. 
+	Merge_Metaphlan.ipynb: Python code to reorder metaPhlaN profile output by species presence/absence.
+	mOTUs_Transformed_Data.xlsx: mOTUs metagenomic and metatranscriptomic profiling outputs, addition of pseudocounts, log transformation, and counts of number of species identified in each output.
+	Count_Species_Metaphlan_mOTUs.xlsx: Counts of species identified by each method in the data and generation of supplementary figure 1.
+	mOTUs_Coefficient_Analysis.pzfx: Graphpad Prism file to determine Spearman correlations of matched metagenomic and metatranscriptomic profiles, Wilcoxon signed rank test for significance, and generate Figure 1A.
+
+
+
+--
+Commands and Implementation
+
+
 Downloading metagenome and metatranscriptome files listed in sra_list
 	1. Download and install SRA toolkit (https://www.ncbi.nlm.nih.gov/sra/docs/toolkitsoft/)
 	2. COMMAND: fastq-dump [SRA]
