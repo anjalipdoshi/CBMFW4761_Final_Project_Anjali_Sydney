@@ -5,7 +5,7 @@ Downloading metagenome and metatranscriptome files listed in sra_list
 Quality filtering of metagenome and metatranscriptome files
 	1. Install kneaddata (http://huttenhower.sph.harvard.edu/kneaddata)
 	2. Download human reference database
-		COMMAND: kneaddata_databse --download human bowtie2 kneaddata_setup	
+		COMMAND: kneaddata_database --download human bowtie2 kneaddata_setup	
 	3. Filter/trim fastq files (removes human sequences and adapters)
 		COMMAND: kneaddata --input --reference-db kneaddata_setup --output kneaddata_output
 
@@ -40,8 +40,8 @@ Differential Expression of 10 Marker Genes - see Marker_Gene_Expression
 
 Add ftsZ to mOTUs database (see FtsZ_Linkage folder)—Redoing Pipeline
 	1. Download and install MOCAT2 tool (https://mocat.embl.de/)
-2. Download ftsZ alignment of 1663 reference organisms (http://eggnogdb.embl.de/#/app/guided_search  - using E coli as query organism) 
-	2. Generate hmm profile from alignment folder
+	2. Generate hmm profile from alignments
+		Download ftsZ alignment of 1663 reference organisms (http://eggnogdb.embl.de/#/app/guided_search  - using E coli as query organism) 
 		Install hmmer-3.0 (http://hmmer.org/)
 		COMMAND: hmmbuild -o COG0099.hmm ENOG4105CDK_ftsz_fasta_trimmed_align.txt
 	3. Install fetchMG (http://vm-lux.embl.de/~mende/fetchMG/download.html)
