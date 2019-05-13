@@ -1,3 +1,6 @@
+Columbia CBMFW4761 Final Project--Transcriptional Profiling of Complex Communities--README
+---
+
 Downloading metagenome and metatranscriptome files listed in sra_list
 	1. Download and install SRA toolkit (https://www.ncbi.nlm.nih.gov/sra/docs/toolkitsoft/)
 	2. COMMAND: fastq-dump [SRA]
